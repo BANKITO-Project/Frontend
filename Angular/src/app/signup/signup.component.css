@@ -1,0 +1,65 @@
+.simple
+{
+	text-align: center;
+	margin: 50px 400px;
+
+}
+.simple h3
+{
+	text-align: center;
+	color:#fff;
+	font-size: 24px;
+	font-family: 'Montserrat', sans-serif;
+}
+#registration{
+	width: 100%;
+	background-color: #051019;
+	opacity: 0.8;
+	padding: 40px 20px;
+	box-sizing: border-box;
+
+}
+#button
+{
+	width: 300px;
+	padding: 10px;
+	border-radius: 5px;
+	outline: 4px;
+}
+#ph
+{
+	outline: 0px;
+	width: 50px;
+	padding: 10px;
+	border-radius: 5px;
+
+}
+#phone
+{
+	width: 100px;
+	padding: 10px;
+	border-radius: 4px;
+	outline: 0px;
+}
+#but
+{
+	color: white;
+	font-size: 18px;
+}
+#butt
+{   width: 100px;
+	padding: 10px;
+	border-radius: 5px;
+	outline: 0px;
+	background-color: #0c6996;
+	border: 2px solid #01010c;
+	color:aliceblue;
+	font-size: 18px;
+}
+.jumbotron {
+    background-color: greenyellow;
+    padding: 10px;
+}
+h1{
+    text-align: center;
+}
