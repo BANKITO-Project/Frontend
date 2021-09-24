@@ -1,7 +1,9 @@
 .simple
 {
 	text-align: center;
-	margin: 50px 400px;
+	margin-top: auto;
+	margin-left: 300px;
+	margin-right: 300px;
 
 }
 .simple h3
@@ -15,11 +17,14 @@
 	width: 100%;
 	background-color: #051019;
 	opacity: 0.8;
-	padding: 40px 20px;
+	padding: 40px 40px;
 	box-sizing: border-box;
 
 }
-#button
+.whit{
+	color: white;
+}
+/* #button
 {
 	width: 300px;
 	padding: 10px;
@@ -29,14 +34,14 @@
 #ph
 {
 	outline: 0px;
-	width: 50px;
+	width: 70px;
 	padding: 10px;
-	border-radius: 5px;
+	border-radius: 10px;
 
 }
 #phone
 {
-	width: 100px;
+	width: 110px;
 	padding: 10px;
 	border-radius: 4px;
 	outline: 0px;
@@ -56,10 +61,4 @@
 	color:aliceblue;
 	font-size: 18px;
 }
-.jumbotron {
-    background-color: greenyellow;
-    padding: 10px;
-}
-h1{
-    text-align: center;
-}
+ */

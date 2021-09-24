@@ -1,22 +1,31 @@
-<div class="jumbotron jumbotron-fluid">
-    <div class="container-fluid">
-        <h1>Welcome To Bankito</h1>
+<div class="container">
+    <div class="Box">
+    <h2>Login page</h2>
+    <form #loginform="ngForm" (ngSubmit)="login()">
+        <small class="text-danger">{{msg}}</small>
+        <div class="form-group">
+            <!-- <label for="email">Email </label> -->
+            <input type="email" class="form-control" placeholder="Email" name="email" [(ngModel)]="user.customer_email" required pattern="[a-zA-Z0-9]{2,}[@][a-zA-Z]{2,7}[.][a-zA-Z]{2,8}" #email="ngModel"
+            [class.is-invalid]="email.invalid && email.touched">
+            <!-- <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is required field</small> -->
+            <div *ngIf = "email.touched && email.invalid" class="text-danger">
+                <small *ngIf="email.errors.required">Email Required!</small>
+                <small *ngIf="email.errors.pattern">Email is Invalid</small>
+            </div>
+        </div>
+        <br/>
+        <div class="form-group">
+            <!-- <label for="password">Password </label> -->
+            <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="user.customer_password"required #password="ngModel"
+                [class.is-invalid]="password.invalid && password.touched">
+                <small class="text-danger" *ngIf="password.invalid && password.touched">Password Required!</small>
+        </div>
+        <br/>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <br/>
+    New user ?
+    <!-- <small class="float-left" (click)="gotosignup()">New user ? Register here</small> -->
+    <small class="btn btn-primary"  [routerLink]="['/signup']">Register here</small>
     </div>
-</div>
-<div class="box">
-    <h2>LOGIN</h2>
-    <form action="slog.html" method="post">
-        <div class="inputBox">
-            <input type="text" name="" required="">
-            <label>username</label>
-        </div>
-        <div class="inputBox">
-            <input type="password" name="" required="" maxlength="8">
-            <label>password</label>
-            
-        </div>
-
-        <input type="submit" name="" value="submit">
-     </form>
-    
 </div>
