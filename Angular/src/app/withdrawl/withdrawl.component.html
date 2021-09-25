@@ -1,1 +1,13 @@
-<p>withdrawl works!</p>
+<div class="container">
+    <div class="Box"> 
+     <br/>     
+    <h2>Withdraw</h2>
+    <form #loginform="ngForm" (ngSubmit)="UpdateBalance()">
+        <small id="small" class="text-danger">{{msg}}</small>
+        <div class="form-group">
+            <label for="amount">Amount </label> 
+            <input type="text" class="form-control" placeholder="Amount To Withdraw" name="Amount">
+        </div>
+        <br/>
+        <button type="submit" class="btn btn-primary">Withdraw</button>
+    </form>

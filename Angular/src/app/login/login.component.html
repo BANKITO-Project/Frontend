@@ -2,10 +2,10 @@
     <div class="Box">
     <h2>Login page</h2>
     <form #loginform="ngForm" (ngSubmit)="login()">
-        <small class="text-danger">{{msg}}</small>
+        <small id="small" class="text-danger">{{msg}}</small>
         <div class="form-group">
             <!-- <label for="email">Email </label> -->
-            <input type="email" class="form-control" placeholder="Email" name="email" [(ngModel)]="user.customer_email" required pattern="[a-zA-Z0-9]{2,}[@][a-zA-Z]{2,7}[.][a-zA-Z]{2,8}" #email="ngModel"
+            <input type="email" class="form-control" placeholder="Email" name="email" [(ngModel)]="user.customerEmail" required pattern="[a-zA-Z0-9]{2,}[@][a-zA-Z]{2,7}[.][a-zA-Z]{2,8}" #email="ngModel"
             [class.is-invalid]="email.invalid && email.touched">
             <!-- <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is required field</small> -->
             <div *ngIf = "email.touched && email.invalid" class="text-danger">
@@ -16,7 +16,7 @@
         <br/>
         <div class="form-group">
             <!-- <label for="password">Password </label> -->
-            <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="user.customer_password"required #password="ngModel"
+            <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="user.customerPassword"required #password="ngModel"
                 [class.is-invalid]="password.invalid && password.touched">
                 <small class="text-danger" *ngIf="password.invalid && password.touched">Password Required!</small>
         </div>
@@ -28,4 +28,4 @@
     <!-- <small class="float-left" (click)="gotosignup()">New user ? Register here</small> -->
     <small class="btn btn-primary"  [routerLink]="['/signup']">Register here</small>
     </div>
-</div>
+  </div>

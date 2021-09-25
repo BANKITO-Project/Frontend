@@ -13,31 +13,28 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   user = new User();
+  user1=new User();
   msg = '';
 
-  constructor(private router: Router, private service: RegistrationService) { }
+  constructor(
+    private router: Router,
+    private service: RegistrationService,
+) {
+}
+
 
   login() {
     this.service.loginUser(this.user).subscribe(
       data => {
         console.log("response received");
-        this.router.navigate(['/dashboard'])
+        localStorage.setItem('token',JSON.stringify(data));
+        this.router.navigate(['/profile'])
       },
       error => {
         console.log("exception occured")
-        this.msg = "Invalid credentials,please enter valid email and password ";
+        this.msg = "Invalid email or password";
       }
     );
   }
-  // gotosignup(){
-  //   this.router.navigate(['/signup'])
-  // }
-  // loginForm = new FormGroup({
-  //   email: new FormControl('', [Validators.required, Validators.pattern('[a-z]{2,10}[@][a-z]{2,5}[.][2-6]')]),
-  //   password: new FormControl('', [Validators.required])
-  // });
-
-  // constructor(private router:Router,private service:RegistrationService) {
-  // }
 
 }

@@ -1,29 +1,35 @@
-.simple
+
+.simple{
+	position: absolute;
+	top:75%;
+	left:50%;
+	transform:translate(-50%,-50%); 
+    width: 500px;
+	margin-top: 5px;
+    padding: 30px;
+    background: rgba(25, 36, 59, 0.8);
+    box-sizing: border-box;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+.simple h2
 {
+	padding: 0;
+	color: #fff;
 	text-align: center;
-	margin-top: auto;
-	margin-left: 300px;
-	margin-right: 300px;
 
 }
-.simple h3
+.whit{
+	color: white;
+	padding-right: 7px;
+}
+/* .simple h2
 {
 	text-align: center;
 	color:#fff;
 	font-size: 24px;
 	font-family: 'Montserrat', sans-serif;
-}
-#registration{
-	width: 100%;
-	background-color: #051019;
-	opacity: 0.8;
-	padding: 40px 40px;
-	box-sizing: border-box;
-
-}
-.whit{
-	color: white;
-}
+} */
 /* #button
 {
 	width: 300px;

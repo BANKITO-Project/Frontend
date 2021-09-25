@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-withdrawl',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WithdrawlComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private router:Router){}
+  msg:'';
+  ngOnInit(){
+    if(!localStorage.getItem('token')){
+      this.router.navigate(['/login'])
+    }
   }
 
 }

@@ -23,13 +23,14 @@
 </div>  -->
 <div class="container">
 	<div class="simple">
-		<h2>Registration page</h2>
-		<form id="registration" #signupform="ngForm" (ngSubmit)="signup()">
-			<small [class.text-danger]="msg.status==500">{{msg.message}}</small>
+		<form  #signupform="ngForm" (ngSubmit)="signup()">
+			<h2>Registration page</h2>
+			<br/>
+			<!-- <small [class.text-danger]="msg.status==500">{{msg.message}}</small> -->
 			<div class="form-group">
 				<!-- <label for="firstname">FirstName</label> -->
 				<input type="firstname" class="form-control" placeholder="FirstName" name="firstname"
-					[(ngModel)]="user.customer_firstName" required pattern="[a-zA-Z]{2,10}" #firstname="ngModel"
+					[(ngModel)]="user.customerFirstname" required pattern="[a-zA-Z]{2,10}" #firstname="ngModel"
 					[class.is-invalid]="firstname.invalid && firstname.touched">
 				<div *ngIf="firstname.touched && firstname.invalid" class="text-danger">
 					<small *ngIf="firstname.errors.required">FirstName Required!</small>
@@ -40,7 +41,7 @@
 			<div class="form-group">
 				<!-- <label for="lastname">LastName </label> -->
 				<input type="lastname" class="form-control" placeholder="LastName" name="lastname"
-					[(ngModel)]="user.customer_lastName" required pattern="[a-zA-Z]{2,10}" #lastname="ngModel"
+					[(ngModel)]="user.customerLastname" required pattern="[a-zA-Z]{2,10}" #lastname="ngModel"
 					[class.is-invalid]="lastname.invalid && lastname.touched">
 				<div *ngIf="lastname.touched && lastname.invalid" class="text-danger">
 					<small *ngIf="lastname.errors.required">LastName Required!</small>
@@ -51,7 +52,7 @@
 			<div class="form-group">
 				<!-- <label for="email">Email </label> -->
 				<input type="email" class="form-control" placeholder="Email" name="email"
-					[(ngModel)]="user.customer_email" required pattern="[a-zA-Z0-9]{2,}[@][a-zA-Z]{2,7}[.][a-zA-Z]{2,8}"
+					[(ngModel)]="user.customerEmail" required pattern="[a-zA-Z0-9]{2,}[@][a-zA-Z]{2,7}[.][a-zA-Z]{2,8}"
 					#email="ngModel" [class.is-invalid]="email.invalid && email.touched">
 				<div *ngIf="email.touched && email.invalid" class="text-danger">
 					<small *ngIf="email.errors.required">Email Required!</small>
@@ -62,14 +63,14 @@
 			<div class="form-group">
 				<!-- <label for="password">Password </label> -->
 				<input type="password" class="form-control" placeholder="Password" name="password"
-					[(ngModel)]="user.customer_password" required #password="ngModel"
+					[(ngModel)]="user.customerPassword" required #password="ngModel"
 					[class.is-invalid]="password.invalid && password.touched">
 				<small class="text-danger" *ngIf="password.invalid && password.touched">Password Required!</small>
 			</div>
 			<br/>
 			<div class="form-group">
 				<!-- <label for="cpassword">Confirm Password </label> -->
-				<input type="password" class="form-control" placeholder="Enter Confirm Password" name="cpassword" (ngModel)="user.customer_password"
+				<input type="password" class="form-control" placeholder="Enter Confirm Password" name="cpassword" (ngModel)="user.customerPassword"
 					required  #cpassword="ngModel" [class.is-invalid]="cpassword.invalid && cpassword.touched">
 				<small class="text-danger" [class.d-none]="(cpassword.value==password.value) || cpassword.untouched">Password &
 					Confirm Password should match</small>
@@ -77,12 +78,12 @@
 			<br/>
 			<div class="form-group">
 				<!-- <label for="city">City </label> -->
-				<input type="city" class="form-control" placeholder="City" name="city" [(ngModel)]="user.customer_city"
+				<input type="city" class="form-control" placeholder="City" name="city" [(ngModel)]="user.customerCity"
 					required #city="ngModel" [class.is-invalid]="city.invalid && city.touched">
 				<small class="text-danger" *ngIf="city.invalid && city.touched">City Required!</small>
 			</div>
 			<br />
-			<button type="submit" class="btn btn-primary">Register</button>
+			<button type="submit" id="sub" class="btn btn-primary">Register</button>
 			<br/>
 			<br/>
 			<span class="whit">Existing user ?</span>

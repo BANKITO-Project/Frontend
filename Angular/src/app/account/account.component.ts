@@ -1,4 +1,7 @@
+import { User } from './../user';
+import { RegistrationService } from './../registration.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-account',
@@ -6,10 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./account.component.css']
 })
 export class AccountComponent implements OnInit {
+  
 
-  constructor() { }
+ constructor(private router:Router){}
+ private user= new User();
 
-  ngOnInit() {
+ ngOnInit() {
+   if(!localStorage.getItem('token')){  
+   this.router.navigate(['/login']);
+   }else{
+   let getUserObj=JSON.parse(localStorage.getItem('token'));  
+   this.user.customerBalance=getUserObj.customerBalance;
   }
+}
 
 }
