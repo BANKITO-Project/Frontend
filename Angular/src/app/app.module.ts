@@ -6,6 +6,9 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { FormsModule } from '@angular/forms';
+import { AlertifyService } from './alertify.service';
+import { RegistrationService } from './registration.service';
+import { TransactionService } from './transaction.service';
 
 
 @NgModule({
@@ -20,7 +23,7 @@ import { FormsModule } from '@angular/forms';
     // ReactiveFormsModule
     FormsModule
   ],
-  providers: [],
+  providers: [ AlertifyService,RegistrationService,TransactionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

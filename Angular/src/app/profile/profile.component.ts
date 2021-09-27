@@ -25,6 +25,7 @@ export class ProfileComponent implements OnInit {
 		this.user.customerLastname=getUserObj.customerLastname;
 		this.user.customerEmail=getUserObj.customerEmail;
 		this.user.customerCity=getUserObj.customerCity;
+		this.user.customerContact=getUserObj.customerContact;
 		//console.log("id"+getUserObj.customerId);
 	  }
 	}

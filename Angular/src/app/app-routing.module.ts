@@ -1,5 +1,6 @@
+import { TransactionsComponent } from './transactions/transactions.component';
 import { ProfileComponent } from './profile/profile.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
@@ -10,11 +11,13 @@ import { TransferComponent } from './transfer/transfer.component';
 
 
 const routes: Routes = [
+  {path: '',redirectTo:'login',pathMatch:'full'},
   {path: 'login',component: LoginComponent },
   {path: 'signup',component: SignupComponent },
   {path: 'account',component: AccountComponent},
   {path: 'deposit',component: DepositComponent},
   {path: 'withdrawl',component: WithdrawlComponent},
+  {path: 'transactions',component: TransactionsComponent},
   {path: 'transfer',component: TransferComponent},
   {path: 'profile',component: ProfileComponent}
 ];
@@ -25,4 +28,5 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const routingComponents = [LoginComponent,SignupComponent,AccountComponent,
-            DepositComponent,WithdrawlComponent,TransferComponent,ProfileComponent];
+            DepositComponent,WithdrawlComponent,TransferComponent,ProfileComponent,
+           TransactionsComponent];
