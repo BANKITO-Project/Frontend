@@ -1,0 +1,24 @@
+<div class="container">
+    <br/>
+    <h2>Search Customer</h2>
+    <input class="form-control" placeholder="CustomerId" type="text" #Id>
+    <br/>
+    <button class="btn btn-primary" type="button" (click)="getCustomer(Id.value)">Get Customer</button>
+    <br/>
+    <br/>
+    <div *ngIf="bool">
+        <h2>Customer Info For customerid : {{Id.value}}</h2>
+        <div class="card-body">
+            <p class="card-text">CustomerId: {{user.customerId}}</p>
+            <p class="card-text">AccountNumber: {{user.accountId}}</p>
+            <p class="card-title">Firstname: {{user.customerFirstname}}</p>
+            <p class="card-title">LastName: {{user.customerLastname}}</p>
+            <p class="card-text">Email: {{user.customerEmail}}</p>
+            <p class="card-text">City: {{user.customerCity}}</p>
+            <p class="card-text">Phone: {{user.customerContact}}</p>
+            <button type="button" class="btn btn-primary" (click)="transactions(user.customerId)">View Transactions</button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-danger" (click)="deactivate(user.customerId)">Deactive Account</button>
+        </div>
+</div>
+</div>
+

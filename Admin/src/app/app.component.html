@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid">
+            <h1>Welcome To Bankito Admin Portal</h1>
+        </div>
+    </div>
+    <nav class="nav-fluid">
+        <ul style="cursor: pointer;">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/customers">All Customers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/searchcustomer">Search Customer</a>
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link" routerLink="/transactions">Customer Transactions</a>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/getTransaction">Search Transaction</a>
+            </li>
+            <li style="float:right" class="nav-item" *ngIf="!loggedIn()">
+                <a class="nav-link" routerLink="/login">Login</a>
+            </li>
+            <li style="cursor: pointer;float:right;" class="nav-item" *ngIf="loggedIn()">
+                <a (click)="logout()" class="nav-link">Logout</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>

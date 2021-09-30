@@ -1,0 +1,28 @@
+<div class="container">
+        <!-- <br />
+        <h2>Customer Transactions</h2>
+        <input class="form-control" placeholder="CustomerId" type="text" #Id>
+        <br />
+        <button class="btn btn-primary" type="button" (click)="getTransactions(Id.value)">Get Transactions</button>
+    <br/> -->
+    <br/>
+    <div *ngIf="bool">
+    <h2>Transactions for customerid : {{n}}</h2>
+    <table class="table table-striped">
+        <tr>
+            <th scope="col">TransactionId</th>
+            <th scope="col">TransactionType</th>
+            <th scope="col">TransactionDate</th>
+            <th scope="col">transactionAmount</th>
+            <th scope="col">transactionStatus</th>
+        </tr>
+        <tr *ngFor="let transaction of transactions">
+            <td>{{transaction.transactionId}}</td>
+            <td>{{transaction.transactionType}}</td>
+            <td>{{transaction.transactionDate}}</td>
+            <td>{{transaction.transactionAmount}}</td>
+            <td>{{transaction.transactionStatus}}</td>
+        </tr>
+    </table>
+</div>
+</div>
