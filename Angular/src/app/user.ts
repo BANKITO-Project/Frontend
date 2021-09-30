@@ -8,7 +8,7 @@ export class User {
 	customerCity:string;
 	customerContact:number;
     customerBalance:number;
-
+    accountId: number;
     constructor(){}
 }
 

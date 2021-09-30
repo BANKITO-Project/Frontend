@@ -9,6 +9,8 @@ import { RegistrationService } from './registration.service';
 })
 export class AppComponent {
 
+	title='Project';
+
 	constructor(private loginService: RegistrationService, private router : Router
 		,private alertify:AlertifyService) {
 	}

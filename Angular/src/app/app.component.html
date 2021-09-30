@@ -1,7 +1,7 @@
-    <div class="container-fluid">
+<div class="container-fluid">
     <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid">
-            <h1>Welcome To Bankito</h1>
+            <h1>Welcome To Bankito Customer Portal</h1>
         </div>
     </div>
     <nav class="nav-fluid">
@@ -28,14 +28,14 @@
                 <a class="nav-link" routerLink="/login">Login</a>
             </li>
             <li style="float:right" class="nav-item" *ngIf="!loggedIn()">
-                <a class="nav-link"  routerLink="/signup">Signup</a>
+                <a class="nav-link" routerLink="/signup">Signup</a>
             </li>
             <li style="cursor: pointer;float:right;" class="nav-item" *ngIf="loggedIn()">
                 <a (click)="logout()" class="nav-link">Logout</a>
             </li>
-          </ul>
+        </ul>
     </nav>
-    </div>
-    <div>
-<router-outlet></router-outlet>
+</div>
+<div>
+    <router-outlet></router-outlet>
 </div>

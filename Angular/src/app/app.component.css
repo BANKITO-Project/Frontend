@@ -40,3 +40,16 @@ h1{
  width: 1000px;
  background-color: violet;
 }
+
+footer {
+    text-align: center;
+    background-color: #000000dc;
+    border: none;
+    color: rgb(224, 211, 211);
+    padding: 5px 15px;
+    text-decoration: none;
+    cursor: pointer;
+    position: fixed;
+    width: 95%;
+    bottom: 0rem;
+}

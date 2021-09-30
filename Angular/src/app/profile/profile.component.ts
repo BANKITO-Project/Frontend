@@ -14,13 +14,13 @@ export class ProfileComponent implements OnInit {
 	constructor(private router:Router,private service:RegistrationService){}
 
 	private user= new User();
-
 	ngOnInit() {
 	  if(!localStorage.getItem('token')){  
 		this.router.navigate(['/login']);
 	  }else{
 		let getUserObj=JSON.parse(localStorage.getItem('token'));  
 		this.user.customerId=getUserObj.customerId;
+		this.user.accountId=getUserObj.accountId;
 		this.user.customerFirstname=getUserObj.customerFirstname;
 		this.user.customerLastname=getUserObj.customerLastname;
 		this.user.customerEmail=getUserObj.customerEmail;
