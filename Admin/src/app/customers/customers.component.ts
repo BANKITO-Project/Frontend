@@ -21,7 +21,7 @@ export class CustomersComponent implements OnInit {
 
   ngOnInit() {
     if(!localStorage.getItem('token')){
-      this.router.navigate(['/login']);
+      this.router.navigate(['login']);
     }else{
     this.service.getAllCustomers().subscribe(res => {
       this.users = res;
@@ -32,13 +32,13 @@ export class CustomersComponent implements OnInit {
     localStorage.removeItem('token');
     localStorage.setItem('token',JSON.stringify(id));
     this.alertify.success("Transactions for customer with Id "+id);
-    this.router.navigate(['/transactions'])
+    this.router.navigate(['transactions'])
   }
  
   public deactivate(id: number): void {
     this.service.deactivate(id).subscribe(res => {
     this.alertify.success("Customer Account with Id "+id+" Deactivated");  
-    this.router.navigate(['/searchcustomer']);
+    this.router.navigate(['searchcustomer']);
     })
 }
 }

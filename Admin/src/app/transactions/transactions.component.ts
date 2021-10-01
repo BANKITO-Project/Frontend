@@ -19,7 +19,7 @@ export class TransactionsComponent implements OnInit {
   n:number;
   ngOnInit() {
     if(!localStorage.getItem('token')){
-      this.router.navigate(['/login']);
+      this.router.navigate(['login']);
     }else{
       let obj=JSON.parse(localStorage.getItem('token'));
       this.service.getAllTransactions(obj).subscribe(res => {

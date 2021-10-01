@@ -23,7 +23,7 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        routingComponents,
+        routingComponents
       ],
       providers: [ AlertifyService,RegistrationService,TransactionService],
     }).compileComponents();
@@ -41,10 +41,5 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('Project');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content title').textContent).toContain('Project');
-  });
+ 
 });

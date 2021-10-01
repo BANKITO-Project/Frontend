@@ -1,3 +1,4 @@
+import { AlertifyService } from './../../../../Admin/src/alertify.service';
 import { RegistrationService } from './../registration.service';
 import { User } from './../user';
 import { Component, OnInit } from '@angular/core';
@@ -11,11 +12,13 @@ import { SlicePipe } from '@angular/common';
 })
 export class ProfileComponent implements OnInit {
 	
-	constructor(private router:Router,private service:RegistrationService){}
+	constructor(private router:Router,private service:RegistrationService,
+		private alertify:AlertifyService){}
 
 	private user= new User();
 	ngOnInit() {
-	  if(!localStorage.getItem('token')){  
+	  if(!localStorage.getItem('token')){
+		this.alertify.error("Login First");  
 		this.router.navigate(['/login']);
 	  }else{
 		let getUserObj=JSON.parse(localStorage.getItem('token'));  

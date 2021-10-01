@@ -17,7 +17,7 @@ export class SearchcustomerComponent implements OnInit {
 
   ngOnInit() {
     if(!localStorage.getItem('token')){
-      this.router.navigate(['/login']);
+      this.router.navigate(['login']);
     }
   }
   private bool:boolean;

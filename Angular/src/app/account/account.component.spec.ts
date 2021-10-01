@@ -1,4 +1,11 @@
+import { HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AlertifyService } from '../alertify.service';
+import { AppRoutingModule } from '../app-routing.module';
+import { TransactionService } from '../transaction.service';
 
 import { AccountComponent } from './account.component';
 
@@ -8,7 +15,9 @@ describe('AccountComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AccountComponent ]
+      declarations: [ AccountComponent ],
+      imports:[FormsModule,RouterTestingModule,HttpClientModule],
+      providers:[TransactionService,AlertifyService]
     })
     .compileComponents();
   }));

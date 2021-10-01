@@ -2,6 +2,7 @@ import { Transaction } from './../transaction';
 import { Component, OnInit } from '@angular/core';
 import { TransactionService } from '../transaction.service';
 import { Router } from '@angular/router';
+import { AlertifyService } from '../alertify.service';
 
 @Component({
   selector: 'app-transactions',
@@ -11,11 +12,13 @@ import { Router } from '@angular/router';
 export class TransactionsComponent implements OnInit {
 
   private transactions:  Transaction[];
-  constructor(private router:Router,private service: TransactionService) {
+  constructor(private router:Router,private service: TransactionService,
+    private alertify:AlertifyService) {
   }
 
   ngOnInit() {
     if(!localStorage.getItem('token')){
+      this.alertify.error("Login First");
       this.router.navigate(['/login']);
     }else{
 		 let getUserObj=JSON.parse(localStorage.getItem('token'));

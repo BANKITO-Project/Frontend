@@ -1,11 +1,9 @@
-
 <div class="container">
 	<div class="simple">
-		<form  #signupform="ngForm" (ngSubmit)="signup()">
+		<form #signupform="ngForm" (ngSubmit)="signup()">
 			<h2>Registration page</h2>
-			<br/>
-			<small id="small" class="text-danger">{{msg}}</small>
-			<!-- <small [class.text-danger]="msg.status==500">{{msg.message}}</small> -->
+			<br />
+			<small id="small" class="text-danger">{{msg}}</small> 
 			<div class="form-group">
 				<!-- <label for="firstname">FirstName</label> -->
 				<input type="text" class="form-control" placeholder="FirstName" name="firstname"
@@ -16,9 +14,9 @@
 					<small *ngIf="firstname.errors.pattern">FirstName is Invalid</small>
 				</div>
 			</div>
-			<br/>
+			<br />
 			<div class="form-group">
-				<!-- <label for="lastname">LastName </label> -->
+				<!--<label for="lastname">LastName </label> -->
 				<input type="text" class="form-control" placeholder="LastName" name="lastname"
 					[(ngModel)]="user.customerLastname" required pattern="[a-zA-Z]{2,10}" #lastname="ngModel"
 					[class.is-invalid]="lastname.invalid && lastname.touched">
@@ -27,7 +25,7 @@
 					<small *ngIf="lastname.errors.pattern">LastName is Invalid</small>
 				</div>
 			</div>
-			<br/>
+			<br />
 			<div class="form-group">
 				<!-- <label for="email">Email </label> -->
 				<input type="email" class="form-control" placeholder="Email" name="email"
@@ -38,7 +36,7 @@
 					<small *ngIf="email.errors.pattern">Email is Invalid</small>
 				</div>
 			</div>
-			<br/>
+			<br />
 			<div class="form-group">
 				<!-- <label for="password">Password </label> -->
 				<input type="password" class="form-control" placeholder="Password" name="password"
@@ -46,37 +44,40 @@
 					[class.is-invalid]="password.invalid && password.touched">
 				<small class="text-danger" *ngIf="password.invalid && password.touched">Password Required!</small>
 			</div>
-			<br/>
+			<br />
 			<div class="form-group">
 				<!-- <label for="cpassword">Confirm Password </label> -->
-				<input type="password" class="form-control" placeholder="Confirm Password" name="cpassword" (ngModel)="user.customerPassword"
-					required  #cpassword="ngModel" [class.is-invalid]="cpassword.invalid && cpassword.touched">
-				<small class="text-danger" [class.d-none]="(cpassword.value==password.value) || cpassword.untouched">Password &
+				<input type="password" class="form-control" placeholder="Confirm Password" name="cpassword"
+					(ngModel)="user.customerPassword" required #cpassword="ngModel"
+					[class.is-invalid]="cpassword.invalid && cpassword.touched">
+				<small class="text-danger"
+					[class.d-none]="(cpassword.value==password.value) || cpassword.untouched">Password &
 					Confirm Password should match</small>
 			</div>
-			<br/>
-			<div class="form-group">
+			<br />
+			<div class="form-group"> 
 				<!-- <label for="city">City </label> -->
 				<input type="text" class="form-control" placeholder="City" name="city" [(ngModel)]="user.customerCity"
 					required #city="ngModel" [class.is-invalid]="city.invalid && city.touched">
 				<small class="text-danger" *ngIf="city.invalid && city.touched">City Required!</small>
 			</div>
-			<br/>
+			<br />
 			<div class="form-group">
-				<input type="text" class="form-control" placeholder="phone number" name="phone" [(ngModel)]="user.customerContact"
-					required pattern="[1-9]{1}[0-9]{9}" #phone="ngModel" [class.is-invalid]="phone.invalid && phone.touched">
-					<div *ngIf="phone.touched && phone.invalid" class="text-danger">
-						<small *ngIf="phone.errors.required">Mobile Number Required!</small>
-						<small *ngIf="phone.errors.pattern">Mobile Number should be of length 10</small>
-					</div>
+				<input type="text" class="form-control" placeholder="phone number" name="phone"
+					[(ngModel)]="user.customerContact" required pattern="[1-9]{1}[0-9]{9}" #phone="ngModel"
+					[class.is-invalid]="phone.invalid && phone.touched">
+				<div *ngIf="phone.touched && phone.invalid" class="text-danger">
+					<small *ngIf="phone.errors.required">Mobile Number Required!</small>
+					<small *ngIf="phone.errors.pattern">Mobile Number should be of length 10</small>
+				</div>
 			</div>
 			<br />
-			<button type="submit" id="sub" class="btn btn-primary">Register</button>
-			<br/>
-			<br/>
+			<button [disabled]="signupform.invalid" type="submit" id="sub" class="btn btn-primary">Register</button>
+			<br />
+			<br />
 			<span class="whit">Existing user ?</span>
-		<!-- <small class="float-left" (click)="gotosignup()">New user ? Register here</small> -->
-		<small class="btn btn-primary" [routerLink]="['/login']">Login here</small>
+			<!--<small class="float-left" (click)="gotosignup()">New user ? Register here</small> -->
+			<small class="btn btn-primary" routerLink="/login">Login here</small>
 		</form>
 	</div>
 </div>

@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
       data => {
         this.alertify.success("Login Sucessful");
         localStorage.setItem('token',JSON.stringify(data));
-        this.router.navigate(['/customers'])
+        this.router.navigate(['customers'])
       },
       error => {
         this.alertify.error("Login Failed");

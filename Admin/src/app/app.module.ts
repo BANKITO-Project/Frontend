@@ -1,3 +1,4 @@
+import { TransactionService } from './../../../Project/src/app/transaction.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,7 +26,7 @@ import { GetTransactionComponent } from './get-transaction/get-transaction.compo
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [TransactionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

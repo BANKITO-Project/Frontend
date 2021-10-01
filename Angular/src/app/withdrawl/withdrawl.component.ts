@@ -18,6 +18,7 @@ export class WithdrawlComponent implements OnInit {
   private transaction=new Transaction();
   ngOnInit() {
     if(!localStorage.getItem('token')){
+      this.alertify.error("Login First");
       this.router.navigate(['/login']);
     }else{
 		 let getUserObj=JSON.parse(localStorage.getItem('token'));

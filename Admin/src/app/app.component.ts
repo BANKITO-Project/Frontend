@@ -8,7 +8,7 @@ import { AlertifyService } from 'src/alertify.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Admin Portal';
+  title = 'Admin';
 
   constructor(private router: Router, private alertify: AlertifyService) { }
 
@@ -19,6 +19,6 @@ export class AppComponent {
   logout() {
     localStorage.removeItem('token');
     this.alertify.success("Logout Success")
-    this.router.navigate(['/login']);
+    this.router.navigate(['login']);
   }
 }
