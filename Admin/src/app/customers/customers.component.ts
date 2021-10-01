@@ -19,15 +19,12 @@ export class CustomersComponent implements OnInit {
 
   }
 
-  ngOnInit() {
-    if(!localStorage.getItem('token')){
-      this.router.navigate(['login']);
-    }else{
+  ngOnInit() { 
     this.service.getAllCustomers().subscribe(res => {
       this.users = res;
     })
   }
-  }
+  
   transactions(id:number){
     localStorage.removeItem('token');
     localStorage.setItem('token',JSON.stringify(id));

@@ -19,10 +19,7 @@ export class DepositComponent implements OnInit {
 
   private transaction=new Transaction();
   ngOnInit() {
-    if(!localStorage.getItem('token')){
-      this.alertify.error("Login First");
-      this.router.navigate(['/login']);
-    }else{
+    if(localStorage.getItem('token')){
 		 let getUserObj=JSON.parse(localStorage.getItem('token'));
      this.transaction.customerId=getUserObj.customerId;  
     }

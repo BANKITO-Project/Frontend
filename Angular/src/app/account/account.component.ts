@@ -16,13 +16,10 @@ export class AccountComponent implements OnInit {
  private user= new User();
 
  ngOnInit() {
-   if(!localStorage.getItem('token')){ 
-    this.alertify.error("Login First");
-   this.router.navigate(['/login']);
-   }else{
+  if(localStorage.getItem('token')){
    let getUserObj=JSON.parse(localStorage.getItem('token'));  
    this.user.customerBalance=getUserObj.customerBalance;
-  }
 }
+ }
 
 }

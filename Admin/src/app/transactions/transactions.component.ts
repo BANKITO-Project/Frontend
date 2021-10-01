@@ -18,16 +18,12 @@ export class TransactionsComponent implements OnInit {
   bool:boolean=false;
   n:number;
   ngOnInit() {
-    if(!localStorage.getItem('token')){
-      this.router.navigate(['login']);
-    }else{
       let obj=JSON.parse(localStorage.getItem('token'));
       this.service.getAllTransactions(obj).subscribe(res => {
              this.transactions = res;
              this.n=obj;
              this.bool=true;
            })
-    }
 }
 // bool:boolean;
 // getTransactions(id:number){

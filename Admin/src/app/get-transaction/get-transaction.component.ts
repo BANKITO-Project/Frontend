@@ -16,9 +16,6 @@ export class GetTransactionComponent implements OnInit {
               private alertify:AlertifyService) { }
 
   ngOnInit() {
-    if(!localStorage.getItem('token')){
-      this.router.navigate(['login']);
-    }
 }
   bool:boolean;
   getTransaction(id:number){

@@ -17,15 +17,12 @@ export class TransactionsComponent implements OnInit {
   }
 
   ngOnInit() {
-    if(!localStorage.getItem('token')){
-      this.alertify.error("Login First");
-      this.router.navigate(['/login']);
-    }else{
+    if(localStorage.getItem('token')){
 		 let getUserObj=JSON.parse(localStorage.getItem('token'));
      this.service.getAllTransactions(getUserObj.customerId).subscribe(res => {
       this.transactions = res;
     })
-    }
+  }
   }
 
 

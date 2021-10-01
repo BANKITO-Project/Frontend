@@ -8,6 +8,7 @@ import { AccountComponent } from './account/account.component';
 import { DepositComponent } from './deposit/deposit.component';
 import { WithdrawlComponent } from './withdrawl/withdrawl.component';
 import { TransferComponent } from './transfer/transfer.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: 'withdrawl',component: WithdrawlComponent},
   {path: 'transactions',component: TransactionsComponent},
   {path: 'transfer',component: TransferComponent},
-  {path: 'profile',component: ProfileComponent}
+  {path: 'profile',component: ProfileComponent},
+  {path:'**',component:PagenotfoundComponent}
 ];
 
 @NgModule({
@@ -29,4 +31,4 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routingComponents = [LoginComponent,SignupComponent,AccountComponent,
             DepositComponent,WithdrawlComponent,TransferComponent,ProfileComponent,
-           TransactionsComponent];
+           TransactionsComponent,PagenotfoundComponent];

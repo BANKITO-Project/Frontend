@@ -16,9 +16,6 @@ export class SearchcustomerComponent implements OnInit {
                 private alertify:AlertifyService) { }
 
   ngOnInit() {
-    if(!localStorage.getItem('token')){
-      this.router.navigate(['login']);
-    }
   }
   private bool:boolean;
   getCustomer(id:number){

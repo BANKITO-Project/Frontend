@@ -6,22 +6,22 @@
     </div>
     <nav class="nav-fluid">
         <ul>
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="loggedIn()">
                 <a class="nav-link" routerLink="/account">Account Balance</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="loggedIn()">
                 <a class="nav-link" routerLink="/deposit">Deposit</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="loggedIn()">
                 <a class="nav-link" routerLink="/withdrawl">Withdrawl</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="loggedIn()">
                 <a class="nav-link" routerLink="/transfer">Transfer</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="loggedIn()">
                 <a class="nav-link" routerLink="/transactions">Transactions</a>
             </li>
-            <li style="float:right" class="nav-item">
+            <li style="float:right" class="nav-item" *ngIf="loggedIn()">
                 <a class="nav-link" routerLink="/profile">Profile</a>
             </li>
             <li style="float:right" class="nav-item" *ngIf="!loggedIn()">

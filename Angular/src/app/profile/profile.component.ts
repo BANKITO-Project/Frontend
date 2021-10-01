@@ -17,10 +17,7 @@ export class ProfileComponent implements OnInit {
 
 	private user= new User();
 	ngOnInit() {
-	  if(!localStorage.getItem('token')){
-		this.alertify.error("Login First");  
-		this.router.navigate(['/login']);
-	  }else{
+		if(localStorage.getItem('token')){
 		let getUserObj=JSON.parse(localStorage.getItem('token'));  
 		this.user.customerId=getUserObj.customerId;
 		this.user.accountId=getUserObj.accountId;
@@ -29,7 +26,6 @@ export class ProfileComponent implements OnInit {
 		this.user.customerEmail=getUserObj.customerEmail;
 		this.user.customerCity=getUserObj.customerCity;
 		this.user.customerContact=getUserObj.customerContact;
-		//console.log("id"+getUserObj.customerId);
-	  }
 	}
+}
 }

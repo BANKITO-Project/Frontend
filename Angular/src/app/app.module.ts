@@ -11,12 +11,14 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AlertifyService } from './alertify.service';
 import { RegistrationService } from './registration.service';
 import { TransactionService } from './transaction.service';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents
+    routingComponents,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,

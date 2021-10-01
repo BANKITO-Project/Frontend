@@ -6,16 +6,16 @@
     </div>
     <nav class="nav-fluid">
         <ul style="cursor: pointer;">
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="loggedIn()">
                 <a class="nav-link" routerLink="customers">All Customers</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="loggedIn()">
                 <a class="nav-link" routerLink="searchcustomer">Search Customer</a>
             </li>
             <!-- <li class="nav-item">
                 <a class="nav-link" routerLink="/transactions">Customer Transactions</a>
             </li> -->
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="loggedIn()">
                 <a class="nav-link" routerLink="getTransaction">Search Transaction</a>
             </li>
             <li style="float:right" class="nav-item" *ngIf="!loggedIn()">

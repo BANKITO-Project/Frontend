@@ -15,11 +15,11 @@ describe('DepositComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DepositComponent ],
-      imports:[FormsModule,RouterTestingModule,HttpClientModule],
-      providers:[TransactionService,AlertifyService]
+      declarations: [DepositComponent],
+      imports: [FormsModule, RouterTestingModule, HttpClientModule],
+      providers: [TransactionService, AlertifyService]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -32,5 +32,9 @@ describe('DepositComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  
+  it("html test", () => {
+    const data = fixture.nativeElement;
+    expect(component.updateBalance(-5)).toBeFalsy;
+  })
+
 });
