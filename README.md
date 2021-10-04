@@ -13,6 +13,10 @@ This online bank management application will provide the following services to c
 	>It will display the ammount of deposited cash or withdrawn cash along with the date of deposition or withdrawal.
  
  # Technologies used 
- REST, Spring Framework, Spring Boot, Angular 10, Bootstrap, HTML, CSS, Jasmine, Karma, JUnit, Mockito, Spring Data, Spring AOP, Log4J, MySQL, Lombok, Jenkins, DevOps, AWS EC2, AWS S3, Docker, Java, Git, Maven, Swagger, Visual Studio Code, Eclipse IDE, AWS RDS, Postman, Agile-Scrum
+Angular 10, Bootstrap, HTML, CSS, Jasmine, Karma, Jenkins, DevOps, AWS EC2, AWS S3, Docker, Java, Git, Maven, Swagger, Visual Studio Code, Eclipse IDE, AWS RDS, Postman, Agile-Scrum.
+ 
+ # Features
+ List of features ready in Bankito 
+ 
   
   
