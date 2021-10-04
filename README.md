@@ -6,7 +6,36 @@ Visiting the physical branches of banks is not only time consuming but can also 
 
 
  # Technologies used 
-Angular 10, Bootstrap, HTML, CSS, Jasmine, Karma, Jenkins, DevOps, AWS EC2, AWS S3, Docker, Java, Git, Maven, Swagger, Visual Studio Code, Eclipse IDE, AWS RDS, Postman, Agile-Scrum.
+ 
+	Angular 10 - version 8.3.29
+
+	Bootstrap - version 
+
+	HTML
+
+	CSS
+	
+	Visual Studio Code
+
+	Agile-Scrum.
+
+	Jasmine & Karma
+
+DevOps :
+
+	Jenkins
+
+	AWS EC2
+
+	AWS S3
+
+	AWS RDS
+
+	Docker
+
+	Git - version 2.33.0
+
+	
  
  # Features
  List of features ready in Bankito :
@@ -27,23 +56,51 @@ Install Nodejs - Download Node.js Installer for Windows/Linux and install it .
 
 Install Angular - npm install @angular/cli8.3.29
 
-Environment setup in AWS :
+Environment setup in AWS EC2 Instance :
 
 Install Java : sudo yum install java-1.8.0
 
 Install Maven : sudo yum install maven
 
 Install node : 
+
 	>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 	>. ~/.nvm/nvm.sh
 	>nvm install node
+	
 Install Angular :
 
 	>npm install -g @angular/cli8.3.29
 
+Clone Frontend Repository by using git clone <git link of Repository>
 	
+	>Frontend Repository : https://github.com/BANKITO-Project/Frontend.git
+	>Backend Repository : https://github.com/BANKITO-Project/Backend.git
 
-Clone Repository by using git clone <git link of frontend> command.
+	
+# Usage 
+	
+After cloning the Repositories , do required changes like MySql connection related.
+	
+Run the cloned Repositories Frontend in Visual Studio code and Backend in Spring tool respectively.
+	
+# Contributors 
+
+	>Sai Prathyusha
+	
+	>Anshu soni 
+	
+	>Venkata Vinayak
+	
+	>Rahul 
+	
+#Liscence 
+
+
+
+
+
+	
 
 
 
