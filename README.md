@@ -22,17 +22,23 @@ Angular 10, Bootstrap, HTML, CSS, Jasmine, Karma, Jenkins, DevOps, AWS EC2, AWS 
 
 # Getting Started 
 Environment setup steps :
+
 Install Nodejs - Download Node.js Installer for Windows/Linux and install it .
+
 Install Angular - npm install @angular/cli8.3.29
 
 Environment setup in AWS :
+
 Install Java : sudo yum install java-1.8.0
+
 Install Maven : sudo yum install maven
+
 Install node : 
 	>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 	>. ~/.nvm/nvm.sh
 	>nvm install node
 Install Angular :
+
 	>npm install -g @angular/cli8.3.29
 
 	
