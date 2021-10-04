@@ -72,13 +72,10 @@ Run the cloned Repositories Frontend in Visual Studio code and Backend in Spring
 	
 # Contributors 
 
-- Sai Prathyusha
-	
-- Anshu soni 
-	
-- Venkat
-	
-- Rahul 
+- Sai Prathyusha :Backend
+- Venkat :Frontend
+- Anshu :Backend
+- Rahul Racharla :Devops
 	
 
 
